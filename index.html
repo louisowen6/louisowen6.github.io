@@ -44,8 +44,8 @@
 								<h1>Louis Owen</h1>
 								<p><i>A Highly-motivated Data Scientist from Indonesia who is currently into NLP.</i></p>
 
-								<input type="text" placeholder="Ask anything about Louis to the Artificial Intelligence Model..." id="myInput" />
-								<div id="output"></div>
+								<input autocomplete="off" type="text" placeholder="Ask anything about Louis to his AI personal assistant..." id="myInput" />
+								<strong><div id="output"></div></strong>
 
 								<!-- <ul class="actions stacked">
 									<li><a href="https://www.linkedin.com/in/louisowen/" class="primary button" target="_blank">Say Hi to Louis</a></li>
@@ -849,9 +849,36 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					const model = await modelUSE;
 					const input = {
 						queries: [query.value],
-						responses: ['His hobbies is watching movies, conduct side-projects, and writing articles.',
-									'Louis is a Highly-motivated Data Scientist from Indonesia who is currently into NLP.',
-									'Working in the same team with Louis is awesome and memorable'
+						responses: ['He has 3 main strengths: strong-willed, fast-learner, and effective. For more info about him, please check the Intro section below.',
+									'His hobbies is watching movies, conduct side-projects, and writing articles. For more info about him, please check the Intro section below.',
+									'I can describe him as a highly-motivated Data Scientist from Indonesia who is currently into NLP. For more info about him, please check the Intro section below.',
+									'Working in the same team with him is awesome and memorable. You can see his colleagues words about him in the Intro section below.',
+									'He got numerous recommendations from his colleagues. Please check the Intro section below.',
+									'He is doing great. Thanks for asking!',
+									'He is fine. Thanks for asking!',
+									"This page is Louis' personal website :) Feel free to explore this page.",
+									"The name of this page's owner is Louis Owen. Please call him Louis :)",
+									'You can call him Louis :)',
+									"Hi! Welcome to Louis Owen's personal website.",
+									'Thanks for greeting him! Hope you have a great day :)',
+									"You probably don't know Louis yet. Please feel free to explore this page to know more about Louis :)",
+									'He is currently based in Bandung, Indonesia.',
+									'He currently lives in Bandung, Indonesia.',
+									'Age is just a number :)',
+									'Thanks to God, work is good!',
+									'Personally, he does love Working From Home (WFH) !',
+									'He is curently working as a Data Science Consultant at The World Bank.',
+									'Currently, he works as a Data Science Consultant at The World Bank.',
+									'Currently, he is working as a Data Science Consultant at The World Bank.',
+									'He is great at time-management. Everything is scheduled properly in his calendar.',
+									'Main strengths: he is a strong-willed, a fast-learner, and an effective person.',
+									'Strengths: he is a strong-willed, a fast-learner, and an effective person.',
+									"His biggest weakness: he is a serious-typical guy who has a difficulty to break-the-ice. However, he ables to turn that weakness into productivity, because thanks to his seriousness, it's easier for him to put a lot of focus in what he is doing.",
+									"His weakness: he is a serious-typical guy who has a difficulty to break-the-ice. However, he ables to turn that weakness into productivity, because thanks to his seriousness, it's easier for him to put a lot of focus in what he is doing.",
+									'For more info about his experiences, publications, education history, and languages skill, please see the Resume section below.',
+									'For more info about the introduction and summary about Louis, please see the Intro section below.',
+									'He pursued a Mathematics major in Bandung Institute of Technology.',
+									'The reason why he loves NLP is because he found it interesting where one can extract insights from the very unstructured text data. If you want to have a deeper discussion about this, please reach him out through his LinkedIn.'
 								]
 					};
 					const embeddings  = await model.embed(input);
