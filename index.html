@@ -21,6 +21,7 @@
 		<meta property="og:url" content="https://louisowen6.github.io/" />
 		
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 	</head>
@@ -28,21 +29,27 @@
 
 		<!-- Wrapper -->
 			<div id="wrapper">
+				
 
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
-							<span class="icon fa-gem"></span>
+							<a href="https://www.linkedin.com/in/louisowen/" class="icon brands fa-linkedin" target="_blank">
+							</a>
 						</div>
 
 						<div class="content">
 							<div class="inner">
+
 								<h1>Louis Owen</h1>
 								<p><i>A Highly-motivated Data Scientist from Indonesia who is currently into NLP.</i></p>
 
-								<ul class="actions stacked">
+								<input type="text" placeholder="Ask anything about Louis to the Artificial Intelligence Model..." id="myInput" />
+								<div id="output"></div>
+
+								<!-- <ul class="actions stacked">
 									<li><a href="https://www.linkedin.com/in/louisowen/" class="primary button" target="_blank">Say Hi to Louis</a></li>
-								</ul>
+								</ul> -->
 							</div>
 							
 						</div>
@@ -782,5 +789,100 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/lazysizes.min.js" async></script>
+
+			<!-- /**
+			* Copyright 2020 Google LLC
+			*
+			* Licensed under the Apache License, Version 2.0 (the "License");
+			* you may not use this file except in compliance with the License.
+			* You may obtain a copy of the License at
+			*
+			*      http://www.apache.org/licenses/LICENSE-2.0
+			*
+			* Unless required by applicable law or agreed to in writing, software
+			* distributed under the License is distributed on an "AS IS" BASIS,
+			* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+			* See the License for the specific language governing permissions and
+			* limitations under the License.
+			*/ -->
+			
+			<!-- References: 
+			1) https://github.com/tensorflow/tfjs-models/blob/master/qna/demo/index.js
+			2) https://github.com/tensorflow/tfjs-models/tree/master/universal-sentence-encoder
+			3) https://github.com/google/making_with_ml/blob/master/semantic_ml/use_sample.js -->
+
+			<!-- Load TensorFlow.js. This is required to use the USE model. -->
+			<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"> </script>
+			<!-- Load the USE model. -->
+			<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder"> </script>
+
+			<!-- Place your code in the script tag below. You can also use an external .js file -->
+			<script>
+				let modelUSE = {};
+				let input;
+				let answerDiv;
+
+				// Utils for handling vectors
+				// Functions below taken from https://www.npmjs.com/package/@tensorflow-models/universal-sentence-encoder
+
+				// Calculate the dot product of two vector arrays.
+				const dotProduct = (xs, ys) => {
+				const sum = xs => xs ? xs.reduce((a, b) => a + b, 0) : undefined;
+
+				return xs.length === ys.length ?
+					sum(zipWith((a, b) => a * b, xs, ys))
+					: undefined;
+				}
+
+				// zipWith :: (a -> b -> c) -> [a] -> [b] -> [c]
+				const zipWith =
+					(f, xs, ys) => {
+					const ny = ys.length;
+					return (xs.length <= ny ? xs : xs.slice(0, ny))
+						.map((x, i) => f(x, ys[i]));
+					}
+
+				// Given a model, a query (i.e. "I want some coffee"), and
+				// an array of responses (["Brings you mug", "Goes to sleep"]),
+				// returns responses ranked by best reply.
+				const process = async () => {
+					const model = await modelUSE;
+					const input = {
+						queries: [query.value],
+						responses: ['His hobbies is watching movies, conduct side-projects, and writing articles.',
+									'Louis is a Highly-motivated Data Scientist from Indonesia who is currently into NLP.',
+									'Working in the same team with Louis is awesome and memorable'
+								]
+					};
+					const embeddings  = await model.embed(input);
+					const embed_query = embeddings['queryEmbedding'].arraySync()[0];
+					const embed_responses = embeddings['responseEmbedding'].arraySync();
+
+					let scores = [];
+					// compute the dotProduct of each query and response pair.
+					for (let i = 0; i < embed_responses.length; i++) {
+						scores.push(dotProduct(embed_query, embed_responses[i]));
+					}    
+
+					var max_idx = scores.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0);
+
+					console.log(scores);
+					answerDiv.innerHTML = input['responses'][max_idx];
+				};
+
+				window.onload = () => {
+					modelUSE = use.loadQnA()
+					query = document.getElementById('myInput')
+					search = document.getElementById('myButton');
+					answerDiv  = document.getElementById("output");
+					
+					query.addEventListener('keyup', async (event) => {
+						if (event.key === 'Enter') {
+						process();
+						}
+					});
+				};
+
+			</script>
 	</body>
 </html>
