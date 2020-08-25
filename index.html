@@ -878,7 +878,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 									'For more info about his experiences, publications, education history, and languages skill, please see the Resume section below.',
 									'For more info about the introduction and summary about Louis, please see the Intro section below.',
 									'He pursued a Mathematics major in Bandung Institute of Technology.',
-									'The reason why he loves NLP is because he found it interesting where one can extract insights from the very unstructured text data. If you want to have a deeper discussion about this, please reach him out through his LinkedIn.'
+									'The reason why he loves NLP is because he found it interesting where one can extract insights from the very unstructured text data. If you want to have a deeper discussion about this, please reach him out through his LinkedIn.',
+									"Thanks to God, his day went good!"
 								]
 					};
 					const embeddings  = await model.embed(input);
@@ -894,6 +895,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					var max_idx = scores.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0);
 
 					console.log(scores);
+					tf.setBackend('webgl');
+					console.log(tf.getBackend());
 					answerDiv.innerHTML = input['responses'][max_idx];
 				};
 
