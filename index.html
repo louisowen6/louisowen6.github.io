@@ -895,7 +895,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					var max_idx = scores.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0);
 
 					console.log(scores);
-					tf.setBackend('webgl');
 					console.log(tf.getBackend());
 					answerDiv.innerHTML = input['responses'][max_idx];
 				};
@@ -908,6 +907,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					
 					query.addEventListener('keyup', async (event) => {
 						if (event.key === 'Enter') {
+						tf.setBackend('webgl');
 						process();
 						}
 					});
