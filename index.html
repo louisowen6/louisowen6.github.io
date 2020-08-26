@@ -9,12 +9,12 @@
 		<title>Louis Owen | Data Scientist</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="title" property="og:title" content="Louis Owen's Portfolio" />
+		<meta name="title" property="og:title" content="Louis Owen's AI Powered Website" />
 		<meta name="description" property="og:description" content="Welcome to Louis Owen's Portfolio" />
 		<meta name="image" property="og:image" content="https://louisowen6.github.io/images/thumbnail.jpg" />
 		
-		<meta property="og:title" content="Louis Owen's Portfolio">
-		<meta property="og:description" content="Welcome to Louis Owen's Portfolio">
+		<meta property="og:title" content="Louis Owen's AI Powered Website">
+		<meta property="og:description" content="Louis Owen's AI Powered Website">
 		<meta property="og:image" content="https://louisowen6.github.io/images/thumbnail.jpg">
 
 		<meta name="author" content="Louis Owen" />
@@ -852,28 +852,22 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				const process_general = async () => {
 					const model = await modelUSE;
 					const input = {
-						queries: [query.value],
-						responses: ["He has 3 main strengths: strong-willed, fast-learner, and effective. For more info about him, please check the Intro section below.",
+						queries: [query.value.toLowerCase()],
+						responses: ["He has 3 main strengths: strong-willed, fast-learner, and effective.",
 									"His hobbies are watching movies, conducting side-projects, and writing articles.",
-									"I can describe him as a highly-motivated Data Scientist from Indonesia who is currently into NLP. For more info about him, please check the Intro section below.",
+									"I can describe him as a highly-motivated Data Scientist from Indonesia who is currently into NLP.",
 									"Working in the same team with him is awesome and memorable. You can see his colleagues words about him in the Intro section below.",
 									"He got numerous recommendations from his colleagues. For more information, please check the Intro section below:)",
-									"He is doing great. Thanks for asking!",
-									"He is fine. Thanks for asking!",
 									"This page is Louis' personal website :) Feel free to explore this page.",
 									"The name of this page's owner is Louis Owen. Please call him Louis :)",
 									"You can call him Louis :)",
 									"Hi! Welcome to Louis Owen's personal website. This website is powered by AI to help you understand more about Louis. Simply ask all of your questions to his personal AI assistant (search bar), and it will give you the response :)",
-									"Thanks for greeting him! Hope you have a great day :)",
 									"You probably don't know Louis yet. Please feel free to explore this page to know more about him :)",
 									"He is currently based in Bandung, Indonesia.",
 									"He currently lives in Bandung, Indonesia.",
 									"Age is just a number :)",
-									"Thanks to God, work is good!",
 									"Personally, he does love Working From Home (WFH) !",
 									"He is currently working as a Data Science Consultant at The World Bank.",
-									"Currently, he works as a Data Science Consultant at The World Bank.",
-									"Currently, he is working as a Data Science Consultant at The World Bank.",
 									"He is great at time-management. Everything is scheduled properly in his calendar.",
 									"Main strengths: he is a strong-willed, a fast learner, and an effective person.",
 									"Strengths: he is a strong-willed, a fast learner, and an effective person.",
@@ -881,9 +875,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 									"For more info about the introduction and summary about Louis, please see the Intro section below.",
 									"He pursued a Mathematics major in Bandung Institute of Technology.",
 									"The reason why he loves NLP is that he found it interesting where one can extract insights from the very unstructured text data. If you want to have a deeper discussion about this, please reach him out through his LinkedIn.",
-									"Thanks to God, his day went good!",
-									"Now, he is working as a Data Science Consultant at The World Bank.",
-									"Now, he works as a Data Science Consultant at The World Bank.",
 									"According to Wikipedia, Natural language processing (NLP) is a subfield of linguistics, computer science, information engineering, and artificial intelligence concerned with the interactions between computers and human (natural) languages, in particular how to program computers to process and analyze large amounts of natural language data.",
 									"The first time he learns about NLP was during his undergraduate thesis creation.",
 									"The first time he learns about Data Science (DS) was at 2018.",
@@ -910,7 +901,32 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 									"The most memorable internship for Louis is at Qlue Smart City, He learns a lot from that internship.",
 									"What made him unique: he has a great personality (strong-willed, fast-learner, effective) with much direct industrial experiences even though he is a fresh-graduate.",
 									"The reasons why he is unique and valuable to any team are because he has a great personality (strong-willed, fast-learner, effective) with much direct industrial experiences even though he is a fresh-graduate.",
-									"He is into NLP because he found it interesting where one can extract insights from the very unstructured text data. If you want to have a deeper discussion about this, please reach him out through his LinkedIn."
+									"He is into NLP because he found it interesting where one can extract insights from the very unstructured text data. If you want to have a deeper discussion about this, please reach him out through his LinkedIn.",
+									"The reason why he joined many internship program is because he want to learn the knowledge directly from the industry and also to meet new friends.",
+									"The reason why he is interested in NLP because he found it interesting where one can extract insights from the very unstructured text data. If you want to have a deeper discussion about this, please reach him out through his LinkedIn.",
+									"The reason why he is interested in Data Science (DS) because he found it interesting where one can extract insights from data and moreover can predict what will be happen in the future. He also felt the Mathematics knowledge he got from his unviersity study can be applied directly.",
+									"He is into Data Science (DS) because he found it interesting where one can extract insights from data and moreover can predict what will be happen in the future. He also felt the Mathematics knowledge he got from his unviersity study can be applied directly.",
+									"The reason why he loves Data Science (DS) because he found it interesting where one can extract insights from data and moreover can predict what will be happen in the future. He also felt the Mathematics knowledge he got from his unviersity study can be applied directly.",
+									"For technical skills, he is familiar with Python, Tableau, SQL, R, Google Big Query, Git, Docker, Design Thinking, cloud service (AWS EC2), Google Data Studio, Matlab, SPSS",
+									"For programming language, he is familiar with Python and R. He also knows some basics about Java, Javascript, and HTML.",
+									"His role model is Elon Musk. He is inspired by Musk because of the great innovation and the contribution to the development of the world.",
+									"He is a Vegan! He loves all vegan foods except tomatoes.",
+									"One of his hobbies is watching movies, especially K-Dramas :)",
+									"His latest publication is a conference paper at The 3rd International Conference of Data Science and Its Applications. His paper is about stock market prediction using both historical stock data and text data from social media, and it will be indexed in IEEE soon.",
+									"He is good at time-management, keeping his motivation up, and learning fast. He is also good at handling any kind of data: tabular, image, or text.",
+									"He has a plan to pursue Master's degree in 2021 or 2022. After that, he will continue gaining experiences along with contributing his knowledges or experiences to the community through open-source or giving talks.",
+									"What's next: He has a plan to pursue Master's degree in 2021 or 2022. After that, he will continue gaining experiences along with contributing his knowledges or experiences to the community through open-source or giving talks.",
+									"For more info related to salary, please do reach him out directly through his LinkedIn :)",
+									"You can contact him directly through his LinkedIn :)",
+									"You can reach him out directly through his LinkedIn :)",
+									"He has three main considerations when choosing his employer: learning curve, quality of the people, and salary :)",
+									"He has three main considerations when choosing his job: learning curve, quality of the people, and salary :)",
+									"He has three main considerations on how to choose the right companies: learning curve, quality of the people, and salary :)",
+									"He is open to work opportunities in Data Science and Machine Learning field, he would be really happy if it is related to NLP :)",
+									"He is open to job opportunities in Data Science and Machine Learning field, he would be really happy if it is related to NLP :)",
+									"He is open to opportunities in Data Science and Machine Learning field, he would be really happy if it is related to NLP :)",
+									"You can chat with him through his LinkedIn :)",
+									"He is a Bachelor of Science (Mathematics) who is graduted from Bandung Institute of Technology with honours in July 2020."
 								]
 					};
 
@@ -956,7 +972,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				// an array of responses (["He is doing great.", "He is currently working at X."]),
 				// returns responses ranked by best reply.
 				const process_trave = async () => {
-					var trave_query = query.value;
+					var trave_query = query.value.toLowerCase();
 
 					trave_query = trave_query.replace(" traveloka","")
 					trave_query = trave_query.replace(" tvlk","")
@@ -967,9 +983,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					const input = {
 						queries: [trave_query],
 						responses: ["He learns much about SEO, business process, as well as other soft skills from his internship at Traveloka.",
-									"At Traveloka, he worked on a SEO-related project where he made a ranking formula and a score card to benchmark the internal and external SEO performance.",
+									"From his internship at Traveloka, he learns much about SEO, business process, as well as other soft skills.",
+									"At Traveloka, he worked on a SEO-related project where he made a ranking formula and a score card to benchmark the internal and external SEO performance. The result of his work is implemented by the SEO team even after he finished the internship at Traveloka.",
 									"He had his internship at Traveloka in 2018 for around 3 months.",
-									"He did a project around SEO, where he made a ranking formula and a score card to benchmark the internal and external SEO performance."
+									"He did a project around SEO, where he made a ranking formula and a score card to benchmark the internal and external SEO performance. The result of his work is implemented by the SEO team even after he finished the internship at Traveloka.",
+									"Project goals: to help SEO team realized their current performance compared to other competitors as well as providing the details of what can be improved in the future.",
+									"Aim of the project: to help SEO team realized their current performance compared to other competitors as well as provide the details of what can be improved in the future.",
+									"Goal of the project: to help SEO team realized their current performance compared to other competitors as well as provide the details of what can be improved in the future."
 								]
 					};
 
@@ -1015,7 +1035,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				// an array of responses (["He is doing great.", "He is currently working at X."]),
 				// returns responses ranked by best reply.
 				const process_tokped = async () => {
-					var tokped_query = query.value;
+					var tokped_query = query.value.toLowerCase();
 
 					tokped_query = tokped_query.replace(" tokopedia","")
 					tokped_query = tokped_query.replace(" toped","")
@@ -1026,9 +1046,198 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					const input = {
 						queries: [tokped_query],
 						responses: ["He learns much about how to do customer segmentation, communication skills, as well as other soft skills from his internship at Tokopedia.",
+									"From his internship at Tokopedia, he learns much about how to do customer segmentation, communication skills.",
 									"At Tokopedia, he worked on 2 big projects. The first one is customer segmentation based on choice of courier and the second one is customer segmentation based on promo usage.",
 									"He had his internship at Tokopedia in 2019 for around 3 months.",
-									"He did 2 projects at Tokopedia. The first one is customer segmentation based on choice of courier and the second one is customer segmentation based on promo usage."
+									"He did 2 projects at Tokopedia. The first one is customer segmentation based on choice of courier and the second one is customer segmentation based on promo usage.",
+									"Project Goals: to gives a better understanding of Tokopedia buyer so that the team can propose more impactful business actions.",
+									"Aim of the Project: to gives a better understanding of Tokopedia buyer so that the team can propose more impactful business actions.",
+									"Goal of the Project: to gives a better understanding of Tokopedia buyer so that the team can propose more impactful business actions."
+								]
+					};
+
+					const embeddings  = await model.embed(input);
+					const embed_query = embeddings['queryEmbedding'].arraySync()[0];
+					const embed_responses = embeddings['responseEmbedding'].arraySync();
+
+					let scores = [];
+					// compute the dotProduct of each query and response pair.
+					for (let i = 0; i < embed_responses.length; i++) {
+						scores.push(dotProduct(embed_query, embed_responses[i]));
+						if (i == embed_responses.length-1){
+							// After finished computing the score, hide the loading dots again
+							document.getElementById("loading_dots").style.display = 'none';
+						}
+					}    
+
+					var max_idx = scores.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0);
+
+					console.log(scores);
+					console.log(tf.getBackend());
+
+					if (scores[max_idx] < 9) {
+						chosen_response = "Sorry, I can't response to that query for now. Please do reach Louis out directly through LinkedIn to discuss about your query with him :)";
+					} else {
+						chosen_response = input['responses'][max_idx];
+					}
+
+					// Show the output
+					answerDiv.style.display = 'inline-block';
+
+					answerDiv.innerHTML = chosen_response;
+					output_timeout = setTimeout(function(){ 
+						answerDiv.innerHTML = "";
+					}, chosen_response.length*45);
+				
+				};
+
+
+				// Do-It-related Model
+				
+				// Given a model, a query (i.e. "What is his current job"), and
+				// an array of responses (["He is doing great.", "He is currently working at X."]),
+				// returns responses ranked by best reply.
+				const process_doit = async () => {
+					var doit_query = query.value.toLowerCase();
+
+					doit_query = doit_query.replace(" do-it","")
+					doit_query = doit_query.replace(" do it","")
+					doit_query = doit_query.replace(" doit","")
+
+					const model = await modelUSE;
+					const input = {
+						queries: [doit_query],
+						responses: ["He learns much about how to do build a credit-scoring model, deployment skill, as well as other soft skills from his internship at Do-It.",
+									"From his internship at Do-It, he learns much about how to do build a credit-scoring model, deployment skill, as well as other soft skills",
+									"At Do-It, he worked on a project which aimed to reduce the Non Performing Loan rate. Specifically, he developed a prediction model for Non-Performing-Loan with around 0.85 balanced accuracy using both internal and external data starting from data gathering until deployment phase. The result of his work is implemented and deployed to their system.",
+									"He had his internship at Do-It from Dec 2019 to Jan 2020.",
+									"He did a project which aimed to reduce the Non Performing Loan rate of Do-It portfolio. The result of his work is implemented and deployed to their system."
+								]
+					};
+
+					const embeddings  = await model.embed(input);
+					const embed_query = embeddings['queryEmbedding'].arraySync()[0];
+					const embed_responses = embeddings['responseEmbedding'].arraySync();
+
+					let scores = [];
+					// compute the dotProduct of each query and response pair.
+					for (let i = 0; i < embed_responses.length; i++) {
+						scores.push(dotProduct(embed_query, embed_responses[i]));
+						if (i == embed_responses.length-1){
+							// After finished computing the score, hide the loading dots again
+							document.getElementById("loading_dots").style.display = 'none';
+						}
+					}    
+
+					var max_idx = scores.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0);
+
+					console.log(scores);
+					console.log(tf.getBackend());
+
+					if (scores[max_idx] < 9) {
+						chosen_response = "Sorry, I can't response to that query for now. Please do reach Louis out directly through LinkedIn to discuss about your query with him :)";
+					} else {
+						chosen_response = input['responses'][max_idx];
+					}
+
+					// Show the output
+					answerDiv.style.display = 'inline-block';
+
+					answerDiv.innerHTML = chosen_response;
+					output_timeout = setTimeout(function(){ 
+						answerDiv.innerHTML = "";
+					}, chosen_response.length*45);
+				
+				};
+
+				// Qlue-related Model
+				
+				// Given a model, a query (i.e. "What is his current job"), and
+				// an array of responses (["He is doing great.", "He is currently working at X."]),
+				// returns responses ranked by best reply.
+				const process_qlue = async () => {
+					var qlue_query = query.value.toLowerCase();
+
+					qlue_query = qlue_query.replace(" qlue","")
+					qlue_query = qlue_query.replace(" qlie","")
+
+					const model = await modelUSE;
+					const input = {
+						queries: [qlue_query],
+						responses: ["He learns much about how to handle image data, concepts in Computer Vision, paper reading skills, writing skills, how to use cloud platform especially AWS, as well as other soft skills from his internship at Qlue Smart City.",
+									"From his internship at Qlue Smart City, he learns much about how to handle image data, concepts in Computer Vision, paper reading skills, writing skills, how to use cloud platform especially AWS, as well as other soft skills.",
+									"At Qlue, he worked on 2 big projects. The first one is developing an age-gender prediction model and the second one is developing a mask detection model. After he finished his internship at Qlue, his project is implemented and used in their products.",
+									"He had his internship at Qlue in 2020 for around 3 months.",
+									"He did 2 projects at Qlue. The first one is developing an age-gender prediction model and the second one is developing a mask detection model. After he finished his internship at Qlue, his project is implemented and used in their products.",
+									"Goal of the Project: developed ML models which will be implemented in Qlue's products.",
+									"Aim of the Project: developed ML models which will be implemented in Qlue's products.",
+									"Project Goals: developed ML models which will be implemented in Qlue's products"
+								]
+					};
+
+					const embeddings  = await model.embed(input);
+					const embed_query = embeddings['queryEmbedding'].arraySync()[0];
+					const embed_responses = embeddings['responseEmbedding'].arraySync();
+
+					let scores = [];
+					// compute the dotProduct of each query and response pair.
+					for (let i = 0; i < embed_responses.length; i++) {
+						scores.push(dotProduct(embed_query, embed_responses[i]));
+						if (i == embed_responses.length-1){
+							// After finished computing the score, hide the loading dots again
+							document.getElementById("loading_dots").style.display = 'none';
+						}
+					}    
+
+					var max_idx = scores.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0);
+
+					console.log(scores);
+					console.log(tf.getBackend());
+
+					if (scores[max_idx] < 9) {
+						chosen_response = "Sorry, I can't response to that query for now. Please do reach Louis out directly through LinkedIn to discuss about your query with him :)";
+					} else {
+						chosen_response = input['responses'][max_idx];
+					}
+
+					// Show the output
+					answerDiv.style.display = 'inline-block';
+
+					answerDiv.innerHTML = chosen_response;
+					output_timeout = setTimeout(function(){ 
+						answerDiv.innerHTML = "";
+					}, chosen_response.length*45);
+				
+				};
+
+
+				// WB-related Model
+				
+				// Given a model, a query (i.e. "What is his current job"), and
+				// an array of responses (["He is doing great.", "He is currently working at X."]),
+				// returns responses ranked by best reply.
+				const process_wb = async () => {
+					var wb_query = query.value.toLowerCase();
+
+					wb_query = wb_query.replace(" world bank","")
+					wb_query = wb_query.replace(" wb","")
+
+					const model = await modelUSE;
+					const input = {
+						queries: [wb_query],
+						responses: ["He learns much about social data science, implementation of NLP in real-life, how to work with colleagues which has different time-zone, how to communicate well in English, as well as other soft-skills, during his tenure at The World Bank.",
+									"During his tenure at The World Bank, he learns much about social data science, implementation of NLP in real-life, how to work with colleagues which has different time-zone, how to communicate well in English, as well as other soft-skills.",
+									"At The World Bank, he worked on a big project which is related to NLP. The project is about topic discussion monitoring from social media and news media regarding COVID-19. He is responsible for creating and maintaining the pipeline from scratch until reporting phase. This project will be released to public soon :)",
+									"He joined The World Bank as a Data Science Consultant from Apr 2020.",
+									"He is doing one big project at The World Bank. He worked on a big project which is related to NLP. The project is about topic discussion monitoring from social media and news media regarding COVID-19. He is responsible for creating and maintaining the pipeline from scratch until reporting phase. This project will be released to public soon :)",
+									"Goal of the Project: to monitor the discussion within Indonesian people about COVID19 from the passive monitoring side.",
+									"Aim of the Project: to monitor the discussion within Indonesian people about COVID19 from the passive monitoring side.",
+									"Project Goal: to monitor the discussion within Indonesian people about COVID19 from the passive monitoring side.",
+									"He started working at The World Bank as a Data Science Consultant from Apr 2020.",
+									"His story about his application process in The World Bank: someone who worked at The World Bank shared an opening for Data Scientist role through one of his organization group. So, he applied by sending his CV to the attached email and then he got interviewed with the users. Long story short, thanks to God,  he is hired as a Data Science Consultant.",
+									"His story about his interview process in The World Bank: someone who worked at The World Bank shared an opening for Data Scientist role through one of his organization group. So, he applied by sending his CV to the attached email and then he got interviewed with the users. Long story short, thanks to God,  he is hired as a Data Science Consultant.",
+									"There are 6 team members (including him) and 1 lead at his team. He is working with the other 2 data scientists from MIT and Oxford, along with 3 other research analysts from Indonesia.",
+									"His work at The World Bank is about topic discussion monitoring from social media and news media regarding COVID-19. He is responsible for creating and maintaining the pipeline from scratch until reporting phase. This project will be released to public soon :)"
 								]
 					};
 
@@ -1081,8 +1290,33 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 						
 					query.addEventListener('keyup', async (event) => {
 						if (event.key === 'Enter') {
-							if (query.value.toLowerCase().includes("where he work") || query.value.toLowerCase().includes("where he works") || query.value.toLowerCase().includes("where is he working")) {
+							if (query.value.toLowerCase()=="hi" || query.value.toLowerCase().includes("hello") || query.value.toLowerCase().includes("hallo") || query.value.toLowerCase().includes("how are you") || query.value.toLowerCase().includes("how's day") || query.value.toLowerCase().includes("what's up") || query.value.toLowerCase().includes("how do you do") || query.value.toLowerCase().includes("morning") || query.value.toLowerCase().includes("evening") || query.value.toLowerCase().includes("afternoon") || query.value.toLowerCase().includes("night")) {
 								if (i == 0){
+									// Hide output 
+									answerDiv.style.display = 'none';
+									// Hide Assistant Description and show loading dots for the first query
+									document.getElementById("first_assistant_desc").style.display = 'none';
+								} else {
+									// Hide output & clear timeout output from previous iter
+									answerDiv.style.display = 'none';
+									clearTimeout(output_timeout);
+								}
+
+								i = i+1;
+								
+								chosen_response = "Thanks for greeting him! Louis is doing great. Hope you have a wonderful day :)";
+
+								// Show the output
+								answerDiv.style.display = 'inline-block';
+
+								answerDiv.innerHTML = chosen_response;
+								output_timeout = setTimeout(function(){ 
+									answerDiv.innerHTML = "";
+								}, chosen_response.length*45);
+							} else if (query.value.toLowerCase().includes("where he work") || query.value.toLowerCase().includes("where he works") || query.value.toLowerCase().includes("where is he working")) {
+								if (i == 0){
+									// Hide output 
+									answerDiv.style.display = 'none';
 									// Hide Assistant Description and show loading dots for the first query
 									document.getElementById("first_assistant_desc").style.display = 'none';
 								} else {
@@ -1104,6 +1338,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 								}, chosen_response.length*45);
 							} else if (query.value.toLowerCase().includes("last intern")) {
 								if (i == 0){
+									// Hide output 
+									answerDiv.style.display = 'none';
 									// Hide Assistant Description and show loading dots for the first query
 									document.getElementById("first_assistant_desc").style.display = 'none';
 								} else {
@@ -1125,6 +1361,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 								}, chosen_response.length*45);
 							} else if (query.value.toLowerCase().includes("first intern")) {
 								if (i == 0){
+									// Hide output 
+									answerDiv.style.display = 'none';
 									// Hide Assistant Description and show loading dots for the first query
 									document.getElementById("first_assistant_desc").style.display = 'none';
 								} else {
@@ -1147,6 +1385,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							} else {
 								console.log(i)
 								if (i_model == 0){
+									// Hide output 
+									answerDiv.style.display = 'none';
 									// Hide Assistant Description and show loading dots for the first query
 									document.getElementById("first_assistant_desc").style.display = 'none';
 									document.getElementById("loading_dots").style.display = 'inline-block';
@@ -1165,7 +1405,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 									process_trave();
 								} else if (query.value.toLowerCase().includes(" tokopedia") || query.value.toLowerCase().includes(" toped") || query.value.toLowerCase().includes(" tkpd") || query.value.toLowerCase().includes(" tkopedia")){
 									process_tokped();
-								} else {
+								} else if (query.value.toLowerCase().includes(" do-it") || query.value.toLowerCase().includes(" do it") || query.value.toLowerCase().includes(" doit")){
+									process_doit();
+								} else if (query.value.toLowerCase().includes(" qlue") || (query.value.toLowerCase().includes(" qlie"))) {
+									process_qlue();
+								} else if (query.value.toLowerCase().includes(" world bank") || (query.value.toLowerCase().includes(" wb"))) {
+									process_wb();
+								}else {
 									process_general();
 								}
 							}
