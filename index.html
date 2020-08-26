@@ -42,8 +42,11 @@
 								<h1>Louis Owen</h1>
 								<p><i>A Highly-motivated Data Scientist from Indonesia who is currently into NLP.</i></p>
 
+								<!-- Currently only supports Web version for AI personal assistant, because of the precision issue (16 vs 32 bit) using WebGL backend and CPU backend is too slow.  -->
 								<input autocomplete="off" type="text" placeholder="Hi, I am Louis' personal AI assistant. Please ask me anything about him..." id="myInput" />
-								<strong><div class="lds-ellipsis" id="output"><div></div><div></div><div></div><div></div></div></strong>
+								<div id="assistant_desc"><strong><i>This personal AI assistant is built using the pre-trained USE-lite model for QnA task from TensorFlow-js. Its first response to you will take some time as it just woke up from a deep sleep :D</i></strong></div>
+								<div class="lds-ellipsis" id="loading_dots"><div></div><div></div><div></div><div></div></div>
+								<strong><div id="output"></div></strong>
 
 								<ul class="actions stacked">
 									<li><a href="https://www.linkedin.com/in/louisowen/" class="primary button" target="_blank" id="say_hi">Say Hi to Louis</a></li>
@@ -813,6 +816,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"> </script>
 			<!-- Load the USE model. -->
 			<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder"> </script>
+			
 
 			<!-- Place your code in the script tag below. You can also use an external .js file -->
 			<script>
@@ -907,6 +911,10 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					// compute the dotProduct of each query and response pair.
 					for (let i = 0; i < embed_responses.length; i++) {
 						scores.push(dotProduct(embed_query, embed_responses[i]));
+						if (i == embed_responses.length-1){
+							// After finished computing the score, hide the loading dots again
+							document.getElementById("loading_dots").style.display = 'none';
+						}
 					}    
 
 					var max_idx = scores.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0);
@@ -919,25 +927,40 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 						var chosen_response = "Sorry, I can't response to that query for now. Please do reach Louis out directly through LinkedIn to discuss about your query with him :)"
 					}
 					
-
-					// Remove loading css first, before print the output
-					answerDiv.classList.remove("lds-ellipsis");
+					// Show the output
+					answerDiv.style.display = 'inline-block';
 
 					answerDiv.innerHTML = chosen_response;
-					setTimeout(function(){ 
+					output_timeout = setTimeout(function(){ 
 						answerDiv.innerHTML = "";
-					}, chosen_response.length*40);
+					}, chosen_response.length*45);
 					
 				};
 
-				window.onload = () => {
-					modelUSE = use.loadQnA()
-					query = document.getElementById('myInput')
+				// Variable to check it is the first time load or not
+				var i = 0;
+
+				window.onload = () => {			
+					query = document.getElementById('myInput');
 					search = document.getElementById('myButton');
 					answerDiv  = document.getElementById("output");
 					
 					query.addEventListener('keyup', async (event) => {
 						if (event.key === 'Enter') {
+							console.log(i)
+							if (i == 0){
+								// Hide Assistant Description and show loading dots for the first query
+								document.getElementById("assistant_desc").style.display = 'none';
+								document.getElementById("loading_dots").style.display = 'inline-block';
+								modelUSE = use.loadQnA();
+							} else {
+								// Hide output & clear timeout output from previous iter
+								answerDiv.style.display = 'none';
+								clearTimeout(output_timeout);
+							}
+
+							i = i+1;
+
 							// Currently only supports Web version for AI personal assistant, because of the precision issue (16 vs 32 bit) using WebGL backend and CPU backend is too slow. 
 							tf.setBackend('webgl');
 							process();

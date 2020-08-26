@@ -1726,13 +1726,35 @@ input, select, textarea {
 
 }
 
+#loading_dots {display: none;}
+@media screen and (min-width: 1200px) {
+
+#loading_dots {display: none;
+		position: relative;
+		top: 15px;
+		width: 1000px;
+		height: 35px;}
+
+}
+
 #output {display: none;}
 @media screen and (min-width: 1200px) {
 
-#output {display: inline-block;
+#output {display: none;
 		position: relative;
-		width: relative;
+		top: 15px;
+		width: 1000px;
 		height: 35px;}
+
+}
+
+#assistant_desc {display: none;}
+@media screen and (min-width: 1200px) {
+
+#assistant_desc {display: block;
+				position: relative;
+				top: 15px;
+				width: 1000px;}
 
 }
 
