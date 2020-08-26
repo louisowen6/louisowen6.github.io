@@ -790,6 +790,19 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/lazysizes.min.js" async></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.4/mobile-detect.min.js"></script>
+			<script>
+				var md = new MobileDetect(window.navigator.userAgent);
+				console.log(md.mobile())
+				if (md.mobile() != null){
+					document.getElementById("myInput").style.display = 'none';
+					document.getElementById("first_assistant_desc").style.display = 'none';
+					document.getElementById("output").style.display = 'none';
+					document.getElementById("loading_dots").style.display = 'none';
+				} else {
+					document.getElementById("say_hi").style.display = 'none';
+				}
+			</script>
 
 			<!-- /**
 			* Copyright 2020 Google LLC

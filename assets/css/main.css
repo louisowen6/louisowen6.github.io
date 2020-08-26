@@ -1719,25 +1719,20 @@ input, select, textarea {
 }
 
 
-#myInput {display: none;}
+/* #myInput {display: none;}
 @media screen and (min-width: 1200px) {
 
 #myInput {display: block;}
 
-}
+} */
 
-#loading_dots {display: none;}
-@media screen and (min-width: 1200px) {
 
 #loading_dots {display: none;
 		position: relative;
 		top: 15px;
 		width: 1000px;
 		height: 35px;}
-}
 
-#output {display: none;}
-@media screen and (min-width: 1200px) {
 
 #output {display: none;
 		position: relative;
@@ -1745,23 +1740,10 @@ input, select, textarea {
 		width: 1000px;
 		height: 35px;}
 
-}
-
-#first_assistant_desc {display: none;}
-@media screen and (min-width: 1200px) {
-
 #first_assistant_desc {display: block;
 				position: relative;
 				top: 15px;
 				width: 1000px;}
 
-}
-
-}
 
 #say_hi {display: block;}
-@media screen and (min-width: 1200px) {
-
-#say_hi {display: none;}
-
-}
