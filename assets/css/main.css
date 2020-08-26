@@ -1747,13 +1747,15 @@ input, select, textarea {
 
 }
 
-#assistant_desc {display: none;}
+#first_assistant_desc {display: none;}
 @media screen and (min-width: 1200px) {
 
-#assistant_desc {display: block;
+#first_assistant_desc {display: block;
 				position: relative;
 				top: 15px;
 				width: 1000px;}
+
+}
 
 }
 
