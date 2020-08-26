@@ -1730,20 +1730,23 @@ input, select, textarea {
 #loading_dots {display: none;
 		position: relative;
 		top: 15px;
-		width: 1000px;
+		width: 60vw;
 		height: 35px;}
 
 
 #output {display: none;
 		position: relative;
 		top: 15px;
-		width: 1000px;
+		width: 60vw;
 		height: 35px;}
 
-#first_assistant_desc {display: block;
-				position: relative;
+#first_assistant_desc {display: flex;
+				flex-direction: column;
 				top: 15px;
-				width: 1000px;}
+				width: 60vw;
+				justify-content: center;
+				align-items: center;
+				text-align: center;}
 
 
 #say_hi {display: block;}
