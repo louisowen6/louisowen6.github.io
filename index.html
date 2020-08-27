@@ -46,11 +46,12 @@
 								<input autocomplete="off" type="text" placeholder="What is his current job" id="myInput" />
 								<div id="first_assistant_desc"><i>Hi, I am Louis' personal AI assistant. I am built on top of the pre-trained USE-lite model for QnA task from TensorFlow-js. Please ask me anything about him and I'll try my best to answer your queries :)</i></div>
 								<div class="lds-ellipsis" id="loading_dots"><div></div><div></div><div></div><div></div></div>
-								<strong></strong><div id="output"></div></strong>
+								<strong><div id="output"></div></strong>
 
 								<ul class="actions stacked">
 									<li><a href="https://www.linkedin.com/in/louisowen/" class="primary button" target="_blank" id="say_hi">Say Hi to Louis</a></li>
 								</ul>
+								
 							</div>
 							
 						</div>
@@ -799,6 +800,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					document.getElementById("first_assistant_desc").style.display = 'none';
 					document.getElementById("output").style.display = 'none';
 					document.getElementById("loading_dots").style.display = 'none';
+
+					var mobile_assistant_desc = document.getElementById("say_hi")
+					mobile_assistant_desc.insertAdjacentHTML('afterend','<div id="mobile_assistant_desc"><i>Meet his personal AI assistant in your web browser :)</i></div')
 				} else {
 					document.getElementById("say_hi").style.display = 'none';
 				}
