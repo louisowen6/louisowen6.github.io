@@ -48,9 +48,9 @@
 								<div class="lds-ellipsis" id="loading_dots"><div></div><div></div><div></div><div></div></div>
 								<strong><div id="output"></div></strong>
 
-								<ul class="actions stacked">
+								<!-- <ul class="actions stacked">
 									<li><a href="https://www.linkedin.com/in/louisowen/" class="primary button" target="_blank" id="say_hi">Say Hi to Louis</a></li>
-								</ul>
+								</ul> -->
 								
 							</div>
 							
@@ -802,7 +802,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					document.getElementById("output").style.display = 'none';
 					document.getElementById("loading_dots").style.display = 'none';
 
-					var mobile_assistant_desc = document.getElementById("say_hi")
+					var mobile_assistant_desc = document.getElementById("output")
 					mobile_assistant_desc.insertAdjacentHTML('afterend','<div id="mobile_assistant_desc"><i>Meet his personal AI assistant in your web browser :)</i></div')
 				} else {
 					document.getElementById("say_hi").style.display = 'none';
